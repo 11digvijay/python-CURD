@@ -1,0 +1,13 @@
+{% extends 'Firstapp/layout.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h2 style="text-align: center">Laptop Details</h2>
+    <div class="container" style="width:40%">
+        <form method="post" class="jumbotorn" style="width:80%">
+            {% csrf_token %}
+            {{form|crispy}}
+            <input type="submit" value=" Add Laptop" class="btn btn-success">
+
+        </form>
+    </div>
+{% endblock %}
